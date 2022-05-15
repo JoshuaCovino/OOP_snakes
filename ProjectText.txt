@@ -1,0 +1,181 @@
+﻿nCurses Snake OOP Project
+Liam Slunjski, Hugh Holfeld, Josh Covino
+A1803288,   a1801987,  a1686064
+
+
+Our project will involve designing a version of the popular digital game snake. The game involves a player controlling a snake, attempting to consume food which appears on the game board without touching the sides of the board. Each time food is eaten, the snake grows larger, making it harder for the player to stay within the boundaries of the game. The utilization of special C++ libraries, such as nCurses, will allow us to create a terminal based version of this game. Inheritance will be incorporated through different food types within the game, each food will make the snake behave differently, adding our own touch of creativity to the popular game.
+
+
+Assessment Concepts and how they will be achieved
+
+
+Memory Allocation from stack and the heap
+
+
+Vectors: Vectors will be used to store the snake’s position on the board.
+
+
+Objects: snake, board, fruit 
+
+
+User Input and Output
+The user will input to play the game of Snake. They will control the snake through the arrow keys on the keyboard. The snake will keep moving in the given direction until the user responds to another input. The display of the snake game will be the output. In addition, the time elapsed and “score” will be displayed.
+
+
+
+
+Object-oriented Programming and Design
+The game utilizes object-oriented programming and design through its entire configuration. The executable program is a collection of different classes and objects which work together to achieve the goal of the program. This allows for a fluent design structure.
+
+
+
+
+
+
+
+
+
+
+Class Descriptions
+
+
+World
+World is the super class, causing the interactions between sub-classes
+
+
+Direction
+Stores the direction, used predominantly in the snake class.
+
+
+Point
+Stores points in the cartesian plane of the game for usage in other classes.
+
+
+Board
+This class defines the board layout and board functions.
+
+
+Snake
+The snake class is for the creation of the snake character that the player controls. The important information kept in the snake class is the current position of all the components of the snake, and the game over function.
+
+
+Fruit
+The fruit class is the parent class of all the fruit types that the snake can eat. Each fruit must have a location, associated with the fruit, stored inside the object.
+
+
+Fruit (sub-classes)
+Grow_Fruit
+This fruit will increase the snake's length.
+
+
+ChilliFruit
+This fruit will end the game.
+
+
+Tests
+Contains the unit testing for selected functions in the other classes.
+
+
+  
+
+
+
+User Interface
+The user interface will be the game board which appears in the computer terminal. A title screen outlines the rules and asks for user input for the size of the board. Arrow keys on the keyboard are used to change the snake’s direction. An ending screen has also been included.
+
+
+Code Style
+The code will be indented with 4 space tabs.
+
+
+Given the complexity of nCurses, comments are a must.
+Each function will have a function description comment.
+
+
+Relevant actions within a function that require explanation will be commented, to give direction from where from or where to a variable is being called.
+
+
+These coding actions aim to increase the coherency of the code, allowing for ease of modification from all group members.
+
+
+Code Functions will be commented in the header file using the format shown below:
+
+
+/**
+        *  function name
+        *
+        * description of function within the game, inputs and output, and
+        * other relevant information
+*/
+
+
+
+
+Testing Plan and Implementation 
+
+
+We will test our program using a makefile which tests and compiles each of our program files. Component and unit testing will be used for each function. The program will be compiled and run after each segment of code has been written to regressively test the code. The files will also be backed up after each edit, to ensure that there is always access to working code.
+
+
+Unit testing was implemented, where appropriate, through the use of the testing files in the game. These files run through unit tests for individual tests of functions, asserting if they give the expected outcomes. For example, the onMove function, a direction was made and implemented to determine if the correct direction allocation was successful. Larger functions such as the collision() function were not included in the unit testing due to complexity.
+
+
+Regression testing was utilised to test the function throughout the creation of our program, thus allowing for errors to be caught out before they permeate through the code, making the problem much harder to solve. This was implemented through the tests in test.cpp test.h
+
+
+Expected input testing was needed for the input of boardsize. The board has been set to be only between the range of 20 and 50, and the user inputs their desired side. It has been set that if the user inputs an invalid input, they will be asked to try again. This was done using the code segment shown below:
+  
+
+
+
+Our testing was automated through the testing files implementation in the make file, allowing for the test to be compiled before every game revision and run.
+
+
+Schedule Plan
+
+
+Week 8: 
+* Deciding project specifications and creating project plan.
+
+
+Week 9:
+* Given the steep learning curve of using nCurses, the base of the project must be complete to test it’s viability.
+* Basic makefile completed
+* Plan outlined for future weeks
+   * Allocate group members to tasks as necessary 
+
+
+Week 10:
+* Finalise game code
+   * Snake movement and growth - Liam and Hugh
+   * Fruits  - Josh
+   * Interface - Liam
+* Finalise testing strategy
+   * Begin implementation of code, two test situations completed - Liam
+
+
+Week 11:  { Final Week }
+        
+* Ensure the game has no bugs and works as intended - Everyone
+   * Fix the “second fruit” bug - Josh
+* Finish fruit and inheritance - Josh
+
+
+* Testing fully functional
+   * Unit testing - Liam and Hugh
+   * Regression testing - Hugh
+   * Makefile for testing - Liam
+* Everything saved properly to SVN - Hugh
+* Ensure makefile works and is up to date - Liam
+* Ensure all functions have been commented and code is congruent with outlined style 
+   * Code follows outlined style - Liam
+   * Full comments on code - Hugh
+   * Code efficiency test - Josh
+Timeline: 
+        Monday: Game finished, bugs sorted
+        Tuesday: Code style/comments completed
+        Wednesday: Testing completed
+        Thursday: SVN save and final check
+
+
+                        Finished!
